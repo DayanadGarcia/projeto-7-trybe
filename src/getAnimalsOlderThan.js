@@ -8,5 +8,4 @@ function getAnimalsOlderThan(animal, age) {
   const idade = myObj.residents.every((elem) => elem.age >= age);
   return idade;// deve retornar um valor booleano
 }
-console.log(getAnimalsOlderThan('otters', 7));
 module.exports = getAnimalsOlderThan;
