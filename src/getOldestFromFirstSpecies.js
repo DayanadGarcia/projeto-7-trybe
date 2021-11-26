@@ -1,5 +1,4 @@
-const { employees } = require('../data/zoo_data');
-const { species } = require('../data/zoo_data');
+const { employees, species } = require('../data/zoo_data');
 // A função busca por informações do animal mais velho da primeira espécie gerenciada pela pessoa colaboradora do parâmetro.
 // Passado o id de um funcionário, encontra a primeira espécie de animal gerenciado pelo funcionário, e retorna um array com nome, sexo e idade do animal mais velho dessa espécie.
 function getOldestFromFirstSpecies(id) {
