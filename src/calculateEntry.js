@@ -14,14 +14,14 @@ function countEntrants(entrants) {
   return entrants.reduce((accPessoas, currPessoa) => {
     calcPessoas(accPessoas, currPessoa);
     return accPessoas;
-  }, { child: 0, adult: 0, senior: 0 });
+  }, { child: 0, adult: 0, senior: 0 }); // retorna onj com total de cada faixa etária
 }
 function calculateEntry(entrants) {
-  if (!entrants || Object.keys(entrants).length === 0) { return 0; }
+  if (!entrants || Object.keys(entrants).length === 0) return 0;
   const myObj = countEntrants(entrants);
   const crianca = (myObj.child) * prices.child;
   const adulto = (myObj.adult) * prices.adult;
   const idoso = (myObj.senior) * prices.senior;
-  return crianca + adulto + idoso;
+  return crianca + adulto + idoso; // retorna o total a ser pago pelo grupo de visitantes
 }
 module.exports = { calculateEntry, countEntrants };
